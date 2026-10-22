@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Price Intelligence</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+</head>
+<body>
+<header>
+  <h1>Price Intelligence</h1>
+  <button id="runAll">Run ingestion</button>
+</header>
+<div id="msg" class="msg" hidden></div>
+
+<section class="cards" id="cards"></section>
+
+<section class="panel">
+  <h2>Tracked searches</h2>
+  <form id="addForm">
+    <input id="qInput" placeholder="e.g. batman (games) or macbook air (Best Buy)" required minlength="2">
+    <button>Track</button>
+  </form>
+  <ul id="queries"></ul>
+</section>
+
+<section class="panel" id="trendPanel" hidden>
+  <h2 id="trendTitle"></h2>
+  <canvas id="trendChart" height="90"></canvas>
+  <p class="hint">Min / median / max of all matching listings at each capture. Median is robust against accessories and outliers.</p>
+</section>
+
+<section class="panel" id="productsPanel" hidden>
+  <h2>Listings</h2>
+  <input id="search" placeholder="Filter by title...">
+  <table>
+    <thead><tr><th></th><th>Title</th><th>Condition</th><th>Latest</th><th>Captures</th><th></th></tr></thead>
+    <tbody id="products"></tbody>
+  </table>
+</section>
+
+<div id="modal" class="modal" hidden>
+  <div class="modal-box">
+    <button id="closeModal" class="close">×</button>
+    <h3 id="mTitle"></h3>
+    <div id="mStats" class="stats"></div>
+    <canvas id="histChart" height="100"></canvas>
+    <a id="mLink" target="_blank" rel="noopener">Open in store</a>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
