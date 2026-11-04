@@ -1,4 +1,4 @@
-# Price Intelligence API (v2)
+# Market price traker
 
 Tracks **real product prices** over time from CheapShark (default, no key), Best Buy or eBay. FastAPI + PostgreSQL + SQLAlchemy + Alembic + Docker + Chart.js dashboard.
 
