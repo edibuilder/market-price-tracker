@@ -4,8 +4,6 @@ An automated price monitoring and analytics platform that collects product listi
 
 Built with **Python, FastAPI, PostgreSQL, SQLAlchemy, Alembic, Docker, and Chart.js**.
 
-![Dashboard overview](screenshots/dashboard.png)
-
 ## The Problem
 
 Comparing prices across marketplaces manually is time-consuming, and checking a product only once does not reveal how its price changes over time.
